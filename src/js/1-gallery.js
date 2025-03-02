@@ -82,14 +82,7 @@ const galleryHtml = images.map(
 );
 
 jsGallery.insertAdjacentHTML('beforeend', galleryHtml.join(''));
-jsGallery.addEventListener('click', onGalleryClick);
 
-function onGalleryClick(event) {
-  event.preventDefault();
-  if (event.target.nodeName !== 'IMG') {
-    return;
-  }
-}
 new SimpleLightbox('.gallery a', {
   captionsData: 'alt',
   captionDelay: 250,
